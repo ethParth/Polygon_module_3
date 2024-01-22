@@ -1,4 +1,4 @@
-# Poly NFT Bridge
+# Custom zK
 
 This repo can be used to create your own custom zkproof, using circom. To deploy your verifier contract on chain and get the proof.  
 
