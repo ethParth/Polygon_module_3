@@ -5,8 +5,11 @@ import "hardhat-circom";
 // circuits
 import circuits = require('./circuits.config.json')
 
+import "dotenv/config";
+
 // set env var to the root of the project
 process.env.BASE_PATH = __dirname;
+const _PRIVATE_KEY = process.env.PRIVATE_KEY || "";
 
 // tasks
 import "./tasks/newcircuit.ts"
@@ -21,6 +24,12 @@ const config: HardhatUserConfig = {
         version: "0.6.11",
       }
     ]
+  },
+  networks: {
+    mumbai: {
+      url: `https://rpc-mumbai.maticvigil.com`,
+      accounts: [_PRIVATE_KEY]
+    }
   },
   circom: {
     // (optional) Base path for input files, defaults to `./circuits/`
