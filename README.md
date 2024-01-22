@@ -17,7 +17,7 @@ Compile the verifierCircuit() circuit and verify it against a smart contract ver
 This will generate the **out** file with circuit intermediaries and geneate the **MultiplierVerifier.sol** contract
 
 ### Prove and Deploy
-`npx hardhat run scripts/deploy.ts` --network <your_network_name>
+`npx hardhat run scripts/deploy.ts --network <your_network_name>`
 This script does 4 things  
 1. Deploys the MultiplierVerifier.sol contract
 2. Generates a proof from circuit intermediaries with `generateProof()`
